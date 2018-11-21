@@ -2,11 +2,13 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <meta name="viewort" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Webtech: Aufgabe 3</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <style>
-    .table tbody tr:hover {background-color:#76B900}
+    .navbar a {color: #000000}
+    .navbar a:visited {color: #0082D1}
+    .table tbody tr:hover {background-color: #76B900}
     </style>
   </head>
 <body>
@@ -18,16 +20,16 @@
 <img src="../images/fiw.jpg" alt="Logo SG FIW"  style=“width:53px; height=48px“
  />
 </header>
-<nav class="navbar">
-  <a href="./aufgabe3.html">ALLE</a> <a href="./NN/ag.html">A-G</a>
-  <a href="./NN/hl.html">H-L</a> <a href="./NN/mr.html">M-R</a>
-  <a href="./NN/sz.html">S-Z</a> <a href="./aufgabe3.html">Startseite</a>
+<nav class="navbar sticky-top navbar-light" style="background-color: #AFAFAF; margin-top: 20px; margin-bottom: 20px;">
+  <a href="./aufgabe3.html">ALLE</a> <a href="#A">A-G</a>
+  <a href="#H">H-L</a> <a href="#M">M-R</a>
+  <a href="#S">S-Z</a> <a href="./aufgabe3.html">Startseite</a>
 </nav>
 <section>
 <h1>
   Alle Teilnehmer_innen
 </h1>
-<table class="table table-hover">
+<table class="table table-striped table-hover">
   <thead>
 				<tr>
 					<th>Vorname</th>
@@ -37,7 +39,7 @@
 				</tr>
   </head>
   <tbody>
-				<tr>
+				<tr id="A">
 					<td>Adam</td>
 					<td>Anderson</td>
 					<td>aanderson8@google.fr</td>
@@ -157,7 +159,7 @@
 					<td>vgrahamk@aol.com</td>
 					<td>165.219.171.1</td>
 				</tr>
-				<tr>
+				<tr id="H">
 					<td>Steven</td>
 					<td>Hamilton</td>
 					<td>shamiltonu@state.tx.us</td>
@@ -193,7 +195,7 @@
 					<td>akim4@odnoklassniki.ru</td>
 					<td>168.244.191.78</td>
 				</tr>
-				<tr>
+				<tr id="M">
 					<td>Jennifer</td>
 					<td>Marshall</td>
 					<td>jmarshallt@gnu.org</td>
@@ -283,7 +285,7 @@
 					<td>kroseg@pinterest.com</td>
 					<td>222.172.140.56</td>
 				</tr>
-				<tr>
+				<tr id="S">
 					<td>Steve</td>
 					<td>Sanders</td>
 					<td>ssanders1b@wikispaces.com</td>
