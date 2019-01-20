@@ -4,44 +4,74 @@ body {
   font-family: "Verdana", sans-serif;
 }
 
-p,h1 {
+p,h1,a {
   padding: 10px;
 }
 
-@media screen and (min-width: 480px) {
+.flex-container h1 {
+  margin: 0px;
+}
+
+.flex-container p {
+  margin: 0px;
+}
+
+#oben {
+  background-color: #66C6FF;
+}
+
+#links {
+  background-color: #00A1FF;
+  color: #FFFFFF;
+}
+
+#mitte {
+  background-color: #004066;
+  color: #FFFFFF;
+}
+
+#rechts {
+  background-color: #0071B2;
+  color: #FFFFFF;
+}
+
+#unten {
+  background-color: #B2E2FF;
+}
+
+@media screen and (min-width: 720px) {
   body {
     background-color: #0082D1;  /*HTW-blau*/
     font-size:1.2rem;
   }
-}
 
-#oben {
-  background-color: #CCCCCC;
-}
+  #oben {
+    background-color: #CE8D67;
+  }
 
-#links {
-  background-color: #ADADAD;
-  flex:1
-}
+  #links {
+    background-color: #CE4B00;
+    color: #FFFFFF;
+    flex:1;
+  }
 
-#mitte {
-  background-color: #666666;
-  flex:4
-}
+  #mitte {
+    background-color: #351300;
+    color: #FFFFFF;
+    flex:4;
+  }
 
-#rechts {
-  background-color: #8F8F8F;
-  flex:2
-}
+  #rechts {
+    background-color: #822F00;
+    color: #FFFFFF;
+    flex:2;
+  }
 
-#unten {
-  background-color: #CCCCCC;
-}
+  #unten {
+    background-color: #CEB4A5;
+  }
 
-.flex-container {
-  display:flex;
-}
-
-.flex-container > aside, section, div {
-
+  .flex-container {
+    display:flex;
+  }
 }
