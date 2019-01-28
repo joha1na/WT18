@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
-<head>
-   <meta charset="UTF-8">
-   <title>Formular</title>
-   <link rel="stylesheet" href="bootstrap.min.css">
-   <link rel="stylesheet" href="styles.css">
-   <?php
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formular</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <?php
 
-   /* in der folgenden Datei steht mein Passwort für den MySQl-Server
+    /* in der folgenden Datei steht mein Passwort für den MySQl-Server
     *  $password = 'meinPasswort';
     *
     */
@@ -31,7 +32,7 @@
    	 * der als String übergebene Text
    	 * die Funktion kann auch gelöscht werden
    	 */
-   function debug_to_console( $data ) {
+     function debug_to_console( $data ) {
 
        if ( is_array( $data ) )
            $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
@@ -39,12 +40,12 @@
            $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 
        echo $output;
-   }
-   ?>
-</head>
-<body>
-  
-	<?php
+     }
+     ?>
+   </head>
+   <body>
+
+     <?php
 	   $form_header = 'Teilnehmerin hinzufügen';
 
 	   if ($_GET) {
@@ -101,13 +102,13 @@
      //$dbh->delete(51);
      //$dbh->edit(array("Jan", "Justermann", "jan@jan.de", "5678", 52));
 	   $teilnehmerinnen = $dbh->all();
-	?>
-   <div class="container">
-     <p><a href="../index.html">Startseite</a></p>
-      <div class="panel panel-default">
+     ?>
+     <div class="container">
+       <p><a href="../index.html">Startseite</a></p>
+       <div class="panel panel-default">
 
          <div class="panel-heading">
-            <h3 class="panel-title"><?= $form_header ?></h3>
+           <h3 class="panel-title"><?= $form_header ?></h3>
          </div>
 
          <div class="panel-body">
@@ -150,9 +151,9 @@
                         <input class="form-control" type="text" name="ip" placeholder="IP-Adresse" />
                         <button type="submit" class="btn btn-primary btn-black">Anlegen</button>
             		</form>
-               	 </div>
+               </div>
              </div>
-         <?php endif; ?>
+            <?php endif; ?>
 
          </div> <!-- / .panel-body -->
       </div> <!-- / .panel -->
@@ -169,9 +170,9 @@
                   '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                      <div class="thumbnail">
                         <p> '.$teilnehmerin["vorname"].' </p>
-      					<h4> '.$teilnehmerin["nachname"].' </h4>
-      		 			<p> '.$teilnehmerin["email"].' </p>
-      					<p> '.$teilnehmerin["ipnr"].' </p>
+      					        <h4> '.$teilnehmerin["nachname"].' </h4>
+      		 			        <p> '.$teilnehmerin["email"].' </p>
+      					        <p> '.$teilnehmerin["ipnr"].' </p>
                         <div class="buttons-edit">
                            <a class="btn btn-default btn-sm"
                            href="'.htmlspecialchars($_SERVER["PHP_SELF"]).'?command=edit&id='.$teilnehmerin["id"].'">Edit</a>
@@ -186,5 +187,5 @@
 
       </div> <!-- / list-group -->
    </div> <!-- / .container -->
-</body>
+ </body>
 </html>
